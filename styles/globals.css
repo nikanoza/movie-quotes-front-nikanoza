@@ -8,17 +8,11 @@
   src: url(../public/assets/fonts/Helvetica.Georgian/helvetica-neue-lt-geo-55-roman.ttf);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  height: 100%;
-}
 
