@@ -1,5 +1,9 @@
 import type { NextPage } from 'next';
 import { Button, LandingHeader, LandingMovie } from 'components';
+import { i18n, useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const movies = [
   {
@@ -27,13 +31,23 @@ const movies = [
 ];
 
 const Home: NextPage = () => {
+  const { t } = useTranslation('common');
+  const router = useRouter();
+
+  const change = router.locale === 'en' ? 'geo' : 'en';
+  console.log(i18n?.language);
   return (
     <div className='w-full min-h-screen bg-darkBlue flex flex-col'>
       <div className='w-full h-screen flex flex-col'>
         <LandingHeader />
+        <Link href='/' locale={change}>
+          <button className=' text-red-500'>
+            {t('change-locale')} {change}
+          </button>
+        </Link>
         <div className='w-full my-auto px-16 flex flex-col items-center'>
           <h1 className='text-cream font-montserrat text-2xl leading-9 text-center font-bold'>
-            Find any quote in millions of movie lines
+            {t('Find any quote in millions of movie lines')}
           </h1>
           <Button
             id='start-btn'
@@ -54,5 +68,13 @@ const Home: NextPage = () => {
     </div>
   );
 };
+
+export async function getStaticProps({ locale }: any) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'common'])),
+    },
+  };
+}
 
 export default Home;
