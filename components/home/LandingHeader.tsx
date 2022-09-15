@@ -19,7 +19,7 @@ const LandingHeader = () => {
         <LanguageSelect className='' />
         <Button
           id='sign-btn'
-          className='px-6 py-2 rounded-md text-base leading-6 text-white font-bold bg-blood hidden md:block'
+          className='px-6 py-2 rounded-md text-base leading-6 text-white font-bold bg-blood hover:bg-bloodHover hidden md:block'
         >
           {t('Sign Up')}
         </Button>

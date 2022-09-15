@@ -21,7 +21,12 @@ module.exports = {
       colors: {
         cream: '#DDCCAA',
         blood: '#E31221',
+        bloodHover: '#CC0E10',
         dBlue: '#0D0B14',
+        backdrop: 'rgba(0, 0, 0, 0.54)',
+        fGray: '#CED4DA',
+        fWhite: '#E9ECEF',
+        success: '#198754',
       },
       height: {
         102: '27rem',
@@ -30,6 +35,9 @@ module.exports = {
       },
       screens: {
         '3xl': '1920px',
+      },
+      boxShadow: {
+        sGray: '0px 0px 0px 4px rgba(13, 110, 253, 0.25)',
       },
     },
   },

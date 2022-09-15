@@ -1,5 +1,10 @@
 import type { NextPage } from 'next';
-import { Button, LandingHeader, LandingMovie } from 'components';
+import {
+  Button,
+  LandingHeader,
+  LandingMovie,
+  RegistrationForm,
+} from 'components';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useRouter } from 'next/router';
@@ -43,7 +48,7 @@ const Home: NextPage = () => {
           </h1>
           <Button
             id='start-btn'
-            className={`px-4 py-2 bg-blood mt-8 text-white text-sm md:text-xl leading-6 rounded-md ${
+            className={`px-4 py-2 bg-blood hover:bg-bloodHover mt-8 text-white text-sm md:text-xl leading-6 rounded-md ${
               locale === 'en' ? 'font-neue' : 'font-georgian'
             }`}
           >
@@ -59,6 +64,7 @@ const Home: NextPage = () => {
           © 2022 movie quotes. All rights reserved.
         </p>
       </footer>
+      <RegistrationForm />
     </div>
   );
 };
