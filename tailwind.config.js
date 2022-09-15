@@ -25,6 +25,11 @@ module.exports = {
       },
       height: {
         102: '27rem',
+        150: '37.5rem',
+        256: '64rem',
+      },
+      screens: {
+        '3xl': '1920px',
       },
     },
   },
