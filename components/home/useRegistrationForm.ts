@@ -1,10 +1,8 @@
 import { useFormik } from 'formik';
-// import { useRouter } from 'next/router';
 import { registrationSchema } from 'schemas';
 import { RegistrationFormValues } from 'types';
 
 export const useRegistrationForm = () => {
-  //   const router = useRouter();
   const initialValues: RegistrationFormValues = {
     username: '',
     email: '',

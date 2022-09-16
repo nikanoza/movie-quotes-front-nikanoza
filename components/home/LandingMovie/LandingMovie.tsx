@@ -1,7 +1,7 @@
-import { LandingMovie } from 'types';
 import Image from 'next/image';
+import { PropsType } from './types';
 
-const LandingMovie: React.FC<{ movie: LandingMovie }> = (props) => {
+const LandingMovie: React.FC<PropsType> = (props) => {
   return (
     <div className='w-full h-102 md:h-150 relative'>
       <Image

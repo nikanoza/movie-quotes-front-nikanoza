@@ -18,12 +18,14 @@ const LandingHeader = () => {
       <div className='flex gap-x-3'>
         <LanguageSelect className='' />
         <Button
+          type='button'
           id='sign-btn'
           className='px-6 py-2 rounded-md text-base leading-6 text-white font-bold bg-blood hover:bg-bloodHover hidden md:block'
         >
           {t('Sign Up')}
         </Button>
         <Button
+          type='button'
           id='login-btn'
           className='w-24 h-10 border border-white rounded-md text-base leading-6 text-white font-bold'
         >
