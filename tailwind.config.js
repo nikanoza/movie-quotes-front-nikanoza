@@ -27,10 +27,19 @@ module.exports = {
         fGray: '#CED4DA',
         fWhite: '#E9ECEF',
         success: '#198754',
+        lowGray: '#6C757D',
+        error: '#DC3545',
+        eye: '#6C757D',
+        link: '#0D6EFD',
+      },
+      width: {
+        102: '27rem',
+        150: '37.5rem',
       },
       height: {
         102: '27rem',
         150: '37.5rem',
+        176: '44rem',
         256: '64rem',
       },
       screens: {

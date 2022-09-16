@@ -13,11 +13,13 @@ export const useRegistrationForm = () => {
   };
   const formik = useFormik({
     initialValues,
-    onSubmit: () => {},
+    onSubmit: (values: RegistrationFormValues) => {
+      console.log(values);
+    },
     validationSchema: registrationSchema,
     validateOnBlur: false,
-    validateOnChange: false,
     validateOnMount: false,
+    enableReinitialize: true,
   });
 
   return { formik };

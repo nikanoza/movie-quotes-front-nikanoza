@@ -10,12 +10,13 @@ export type RegistrationFormValues = {
 export type FormikInput = {
   id: string;
   inputName: string;
-  onChange?: FormikHandlers['handleChange'];
   errors: FormikErrors;
-  value: string;
+  value?: string;
+  defaultValue?: string;
   type: string;
   className: string;
   touched: FormikTouched;
   placeholder: string;
   dirty: boolean;
+  handleChange: FormikHandlers['handleChange'];
 };

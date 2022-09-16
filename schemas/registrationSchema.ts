@@ -1,4 +1,4 @@
-import Yup from 'yup';
+import * as Yup from 'yup';
 
 const registrationSchema = Yup.object({
   username: Yup.string()
@@ -7,7 +7,7 @@ const registrationSchema = Yup.object({
     .max(15, 'username must have maximum 15 characters')
     .matches(
       /^[a-z0-9]*$/,
-      'username must contain only lower english letters and numbers'
+      'username must contain english letters and numbers only'
     ),
   email: Yup.string()
     .required('email is required')

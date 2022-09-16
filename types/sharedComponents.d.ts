@@ -5,4 +5,5 @@ export type Button = {
   className: string;
   onClick?: () => void;
   children: ReactNode;
+  type: 'button' | 'submit' | 'reset' | undefined;
 };
