@@ -15,9 +15,7 @@ const useRegistrationForm = () => {
   };
   const formik = useFormik({
     initialValues,
-    onSubmit: (values: RegistrationFormValues) => {
-      console.log(values);
-    },
+    onSubmit: () => {},
     validationSchema: registrationSchema,
     validateOnBlur: false,
     validateOnMount: false,

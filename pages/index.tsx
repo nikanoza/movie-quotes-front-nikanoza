@@ -4,10 +4,9 @@ import {
   LandingHeader,
   LandingMovie,
   RegistrationForm,
+  useHomePage,
 } from 'components';
-import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { useRouter } from 'next/router';
 
 const movies = [
   {
@@ -35,9 +34,8 @@ const movies = [
 ];
 
 const Home: NextPage = () => {
-  const router = useRouter();
+  const { router, t } = useHomePage();
   const locale = router.locale;
-  const { t } = useTranslation('landing');
   return (
     <div className='w-full min-h-screen bg-darkBlue flex flex-col'>
       <div className='w-full h-screen flex flex-col'>
