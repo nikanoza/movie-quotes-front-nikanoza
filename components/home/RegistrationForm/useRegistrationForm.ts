@@ -1,8 +1,12 @@
 import { useFormik } from 'formik';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 import { registrationSchema } from 'schemas';
 import { RegistrationFormValues } from 'types';
 
-export const useRegistrationForm = () => {
+const useRegistrationForm = () => {
+  const { t } = useTranslation('landing');
+  const router = useRouter();
   const initialValues: RegistrationFormValues = {
     username: '',
     email: '',
@@ -20,5 +24,7 @@ export const useRegistrationForm = () => {
     enableReinitialize: true,
   });
 
-  return { formik };
+  return { formik, t, router };
 };
+
+export default useRegistrationForm;

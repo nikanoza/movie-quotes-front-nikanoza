@@ -1,10 +1,10 @@
 import Image from 'next/image';
-import { ChangeEvent, useRef, useState } from 'react';
+import { ChangeEvent } from 'react';
 import { FormikInput } from 'types';
+import useInput from './useInput';
 
 const Input: React.FC<FormikInput> = (props) => {
-  const [showStatus, setShowStatus] = useState<boolean>(false);
-  const inputRef = useRef<HTMLInputElement>(null);
+  const { showStatus, setShowStatus, inputRef } = useInput();
 
   const statusChangeHandler = () => {
     setShowStatus(!showStatus);

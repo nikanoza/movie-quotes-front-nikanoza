@@ -1,11 +1,9 @@
 import { Button, LanguageSelect } from 'components';
-import { useTranslation } from 'next-i18next';
-import { useRouter } from 'next/router';
+import useLandingHeader from './useLandingHeader';
 
 const LandingHeader = () => {
-  const router = useRouter();
+  const { router, t } = useLandingHeader();
   const locale = router.locale;
-  const { t } = useTranslation('landing');
   return (
     <header
       className={`w-full py-8 px-9 flex justify-between items-center ${

@@ -1,13 +1,9 @@
 import { Modal, Input, Button } from 'components';
-import { useTranslation } from 'next-i18next';
-import { useRouter } from 'next/router';
-import { useRegistrationForm } from './useRegistrationForm';
+import useRegistrationForm from './useRegistrationForm';
 import Image from 'next/image';
 
 const RegistrationForm = () => {
-  const { t } = useTranslation('landing');
-  const { formik } = useRegistrationForm();
-  const router = useRouter();
+  const { formik, t, router } = useRegistrationForm();
   const languageFont = router.locale === 'en' ? 'font-neue' : 'font-georgian';
   return (
     <Modal>
