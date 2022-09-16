@@ -9,7 +9,10 @@ const RegistrationForm = () => {
     <Modal>
       <form
         className='w-full h-full md:w-150 md:h-176 md:mx-auto md:my-auto pt-20 lg:pt-5 pb-4 px-11 bg-darkBlue flex flex-col items-center'
-        onSubmit={formik.handleSubmit}
+        onSubmit={(e) => {
+          formik.validateOnChange = true;
+          formik.handleSubmit(e);
+        }}
       >
         <h2
           className={`font-medium leading-7 text-2xl lg:text-3xl text-white ${languageFont}`}
@@ -42,7 +45,7 @@ const RegistrationForm = () => {
         <div
           className={`w-full h-4 font-normal text-sm text-blood leading-5 ${languageFont}`}
         >
-          {t(formik.errors['username'] || '')}
+          {t((formik.touched['username'] && formik.errors['username']) || '')}
         </div>
         <label
           htmlFor='registration-mail'
@@ -65,7 +68,7 @@ const RegistrationForm = () => {
         <div
           className={`w-full h-4 font-normal text-sm text-blood leading-5 ${languageFont}`}
         >
-          {t(formik.errors['email'] || '')}
+          {t((formik.touched['email'] && formik.errors['email']) || '')}
         </div>
         <label
           htmlFor='registration-password'
@@ -88,7 +91,7 @@ const RegistrationForm = () => {
         <div
           className={`w-full h-4 font-normal text-sm text-blood leading-5 ${languageFont}`}
         >
-          {t(formik.errors['password'] || '')}
+          {t((formik.touched['password'] && formik.errors['password']) || '')}
         </div>
         <label
           htmlFor='registration-repeat-password'
@@ -111,7 +114,11 @@ const RegistrationForm = () => {
         <div
           className={`w-full h-4 font-normal text-sm text-blood leading-5 ${languageFont}`}
         >
-          {t(formik.errors['repeatPassword'] || '')}
+          {t(
+            (formik.touched['repeatPassword'] &&
+              formik.errors['repeatPassword']) ||
+              ''
+          )}
         </div>
         <Button
           id='reg-btn'

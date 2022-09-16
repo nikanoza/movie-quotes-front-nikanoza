@@ -4,9 +4,9 @@ import {
   LandingHeader,
   LandingMovie,
   RegistrationForm,
-  useHomePage,
 } from 'components';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useHomePage } from 'hooks';
 
 const movies = [
   {

@@ -51,17 +51,6 @@ const Input: React.FC<FormikInput> = (props) => {
           />
         </div>
       )}
-      {props.value === '' && props.errors[props.inputName] && (
-        <div className='absolute right-2 flex justify-center items-center'>
-          <Image
-            src='/assets/error.png'
-            alt=''
-            className='w-4 h-4'
-            width={16}
-            height={16}
-          />
-        </div>
-      )}
       {props.type === 'password' && (
         <div className='absolute right-7 flex justify-center items-center'>
           <Image
