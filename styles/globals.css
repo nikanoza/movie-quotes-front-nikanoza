@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'neue';
+  src: url(../public/assets/fonts/Helvetica-Neue-Font/Helvetica\ Neue\ Medium\ Extended.ttf);
+}
+
+@font-face {
+  font-family: 'georgian';
+  src: url(../public/assets/fonts/Helvetica.Georgian/helvetica-neue-lt-geo-55-roman.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
