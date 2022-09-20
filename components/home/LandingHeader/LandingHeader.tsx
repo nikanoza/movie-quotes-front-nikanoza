@@ -1,7 +1,8 @@
 import { Button, LanguageSelect } from 'components';
+import { PropsType } from './types';
 import useLandingHeader from './useLandingHeader';
 
-const LandingHeader = () => {
+const LandingHeader: React.FC<PropsType> = (props) => {
   const { router, t } = useLandingHeader();
   const locale = router.locale;
   return (
@@ -19,6 +20,7 @@ const LandingHeader = () => {
           type='button'
           id='sign-btn'
           className='px-6 py-2 rounded-md text-base leading-6 text-white font-bold bg-blood hover:bg-bloodHover hidden md:block'
+          onClick={() => props.openModal('register')}
         >
           {t('Sign Up')}
         </Button>

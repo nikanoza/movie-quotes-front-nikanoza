@@ -1,12 +1,13 @@
 import { Modal, Input, Button } from 'components';
 import useRegistrationForm from './useRegistrationForm';
 import Image from 'next/image';
+import { PropsType } from './types';
 
-const RegistrationForm = () => {
+const RegistrationForm: React.FC<PropsType> = (props) => {
   const { formik, t, router } = useRegistrationForm();
   const languageFont = router.locale === 'en' ? 'font-neue' : 'font-georgian';
   return (
-    <Modal>
+    <Modal close={() => props.modalChangeHandler('')}>
       <form
         className='w-full h-full md:w-150 md:h-176 md:mx-auto md:my-auto pt-20 lg:pt-5 pb-4 px-11 bg-darkBlue flex flex-col items-center'
         onSubmit={(e) => {

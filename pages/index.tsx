@@ -34,12 +34,12 @@ const movies = [
 ];
 
 const Home: NextPage = () => {
-  const { router, t } = useHomePage();
+  const { router, t, modal, openModal } = useHomePage();
   const locale = router.locale;
   return (
     <div className='w-full min-h-screen bg-darkBlue flex flex-col'>
       <div className='w-full h-screen flex flex-col'>
-        <LandingHeader />
+        <LandingHeader openModal={openModal} />
         <div className='w-full my-auto px-16 flex flex-col items-center'>
           <h1 className='text-cream font-montserrat text-2xl md:text-3xl xl:text-4xl 3xl:text-6xl 2xl:w-1/4 3xl:w-2/5 leading-9 text-center font-bold'>
             {t('Find any quote in millions of movie lines')}
@@ -63,7 +63,9 @@ const Home: NextPage = () => {
           © 2022 movie quotes. All rights reserved.
         </p>
       </footer>
-      <RegistrationForm />
+      {modal === 'register' && (
+        <RegistrationForm modalChangeHandler={openModal} />
+      )}
     </div>
   );
 };
