@@ -7,6 +7,10 @@ export type RegistrationFormValues = {
   repeatPassword: string;
 };
 
+export type ForgotPasswordFormValues = {
+  email: string;
+};
+
 export type FormikInput = {
   id: string;
   inputName: string;

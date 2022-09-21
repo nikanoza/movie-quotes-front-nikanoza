@@ -17,6 +17,8 @@ module.exports = {
       backgroundImage: {
         darkBlue:
           'linear-gradient(187.16deg, #181623 0.07%, #191725 51.65%, #0D0B14 98.75%)',
+        popup:
+          'linear-gradient(112.94deg, rgba(239, 239, 239, 0.3) -1.81%, rgba(239, 239, 239, 0.00514528) 102.5%, rgba(1, 1, 1, 0.00260417) 102.51%, rgba(239, 239, 239, 0.05) 102.52%);',
       },
       colors: {
         cream: '#DDCCAA',
@@ -34,10 +36,13 @@ module.exports = {
       },
       width: {
         102: '27rem',
+        134: '33.625rem',
         150: '37.5rem',
+        '3/10': '30%',
       },
       height: {
-        102: '27rem',
+        104: '26rem',
+        108: '27rem',
         150: '37.5rem',
         176: '44rem',
         256: '64rem',

@@ -25,5 +25,16 @@
     "password must have maximum 15 characters": "პაროლი უნდა შეიცავდეს მაქსიმუმ 15 სიმბოლოს",
     "password must contain only lower english letters and numbers": "პაროლი უნდა შეიცავდეს მხოლოდ ლათინურ ასოებს და ციფრებს",
     "This field is required": "ამ ველის შევსება სავალდებულოა",
-    "password didn't match": "უნდა ემთხვეოდეს პაროლს"
+    "password didn't match": "უნდა ემთხვეოდეს პაროლს",
+    "Please check your email and follow the instructions to activate your account.": "გთხოვთ, შეამოწმოთ თქვენი ელ-ფოსტა და მიჰყევით ინსტრუქციას ანგარიშის გასააქტიურებლად",
+    "Go to my email" : "ელ-ფოსტაზე გადასვლა",
+    "Thank you!" : "მადლობა!",
+    "Return to Home page": "მთავარ გვერდზე გადასვლა",
+    "Send instructions" : "ინსტრუქციის გაგზავნა",
+    "Back to log in" : "ავტორიზაციაზე დაბრუნება",
+    "Enter the email and we’ll send an email with instructions to reset your password": "ჩაწერე ელ-ფოსტა და ჩვენ გამოგიგზავნით პაროლის განახლების ინსტრუქციას",
+    "Forgot password?" : "დაგავიწყდა პაროლი?",
+    "Check your email" : "შეამოწმე ელ-ფოსტა",
+    "We have sent a password recover instructions to your email" : "ჩვენ გამოგიგზავნეთ პაროლის განახლების ინსტრუქცია",
+    "Skip, I’ll confirm later" : "გამოტოვე, დავეთანხმები მოგვიანებით"
 }
