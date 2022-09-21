@@ -11,6 +11,11 @@ export type ForgotPasswordFormValues = {
   email: string;
 };
 
+export type PasswordResetFormValues = {
+  password: string;
+  repeatPassword: string;
+};
+
 export type FormikInput = {
   id: string;
   inputName: string;

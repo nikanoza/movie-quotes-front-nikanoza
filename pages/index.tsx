@@ -8,6 +8,7 @@ import {
   PostForgot,
   PostRegistration,
   RegistrationForm,
+  PasswordReset,
 } from 'components';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useHomePage } from 'hooks';
@@ -81,6 +82,9 @@ const Home: NextPage = () => {
         <ForgotPassword modalChangeHandler={openModal} />
       )}
       {modal === 'post-forgot' && <PostForgot modalChangeHandler={openModal} />}
+      {modal === 'forgot-reset' && (
+        <PasswordReset modalChangeHandler={openModal} />
+      )}
     </div>
   );
 };

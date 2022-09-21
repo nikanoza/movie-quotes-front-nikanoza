@@ -1,19 +1,20 @@
 import { useFormik } from 'formik';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import { forgotPasswordSchema } from 'schemas';
-import { ForgotPasswordFormValues } from 'types';
+import { passwordResetSchema } from 'schemas';
+import { PasswordResetFormValues } from 'types';
 
-const useForgotPassword = () => {
+const usePasswordReset = () => {
   const { t } = useTranslation('landing');
   const router = useRouter();
-  const initialValues: ForgotPasswordFormValues = {
-    email: '',
+  const initialValues: PasswordResetFormValues = {
+    password: '',
+    repeatPassword: '',
   };
   const formik = useFormik({
     initialValues,
     onSubmit: () => {},
-    validationSchema: forgotPasswordSchema,
+    validationSchema: passwordResetSchema,
     validateOnBlur: false,
     validateOnMount: false,
     enableReinitialize: true,
@@ -22,4 +23,4 @@ const useForgotPassword = () => {
   return { formik, t, router };
 };
 
-export default useForgotPassword;
+export default usePasswordReset;

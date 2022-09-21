@@ -5,3 +5,4 @@ export { default as PostRegistration } from './PostRegistration';
 export { default as PostActivated } from './PostActivated';
 export { default as ForgotPassword } from './ForgotPassword';
 export { default as PostForgot } from './PostForgot';
+export { default as PasswordReset } from './PasswordReset';

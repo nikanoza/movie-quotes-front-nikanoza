@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 
 const useHomePage = () => {
-  const [modal, setModal] = useState<string>('post-forgot');
+  const [modal, setModal] = useState<string>('forgot-reset');
 
   const openModal = (modalType: string) => {
     setModal(modalType);
