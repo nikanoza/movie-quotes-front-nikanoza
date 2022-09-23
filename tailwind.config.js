@@ -33,6 +33,11 @@ module.exports = {
         error: '#DC3545',
         eye: '#6C757D',
         link: '#0D6EFD',
+        boxBg: '#24222F',
+        menuBg: '#11101A',
+        hr: 'rgba(206, 212, 218, 0.5)',
+        hulk: '#198754',
+        lightHulk: 'rgba(25, 135, 84, 0.2)',
       },
       width: {
         102: '27rem',
@@ -41,6 +46,7 @@ module.exports = {
         '3/10': '30%',
       },
       height: {
+        0.25: '0,0625rem',
         104: '26rem',
         108: '27rem',
         150: '37.5rem',

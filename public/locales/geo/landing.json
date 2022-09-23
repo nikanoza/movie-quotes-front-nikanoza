@@ -36,5 +36,8 @@
     "Forgot password?" : "დაგავიწყდა პაროლი?",
     "Check your email" : "შეამოწმე ელ-ფოსტა",
     "We have sent a password recover instructions to your email" : "ჩვენ გამოგიგზავნეთ პაროლის განახლების ინსტრუქცია",
-    "Skip, I’ll confirm later" : "გამოტოვე, დავეთანხმები მოგვიანებით"
+    "Skip, I’ll confirm later" : "გამოტოვე, დავეთანხმები მოგვიანებით",
+    "Create new password": "შექმენი ახალი პაროლი",
+    "Your new password must be different from previous used passwords": "ახალი პაროლი არ უნდა ემთხვეოდეს წინა პაროლს",
+    "Reset password": "პაროლის განახლება"
 }

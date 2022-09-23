@@ -20,7 +20,7 @@ const Input: React.FC<FormikInput> = (props) => {
         id={props.id}
         ref={inputRef}
         placeholder={props.placeholder}
-        defaultValue={props.value}
+        defaultValue={props.defaultValue}
         className={
           `pl-3 pr-14 py-2 text-base leading-6 rounded border border-fGray disabled:bg-fWhite focus:shadow-sGray outline-none ${
             props.touched && props.errors[props.inputName]

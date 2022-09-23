@@ -16,16 +16,22 @@ export type PasswordResetFormValues = {
   repeatPassword: string;
 };
 
+export type LoginFormesValues = {
+  user: string;
+  password: string;
+  remember: string | boolean;
+};
+
 export type FormikInput = {
   id: string;
   inputName: string;
   errors: FormikErrors;
-  value?: string;
-  defaultValue?: string;
+  value?: string | boolean;
+  defaultValue?: string | number | readonly string[] | undefined;
   type: string;
   className: string;
   touched: FormikTouched;
-  placeholder: string;
+  placeholder?: string;
   dirty: boolean;
   handleChange: FormikHandlers['handleChange'];
 };
