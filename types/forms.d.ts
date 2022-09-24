@@ -7,7 +7,7 @@ export type RegistrationFormValues = {
   repeatPassword: string;
 };
 
-export type ForgotPasswordFormValues = {
+export type EmailFormValues = {
   email: string;
 };
 

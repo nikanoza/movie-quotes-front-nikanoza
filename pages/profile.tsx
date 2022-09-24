@@ -1,5 +1,5 @@
 import { Button, Menu } from 'components';
-import { Emails, ProfileMain } from 'components/profile';
+import { AddEmail, Emails, ProfileMain } from 'components/profile';
 import { useProfile } from 'hooks';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -32,6 +32,9 @@ const Profile = () => {
       </Button>
       {infoBox === 'main' && <ProfileMain changeInfoBoxHandler={setInfoBox} />}
       {infoBox === 'emails' && <Emails changeInfoBoxHandler={setInfoBox} />}
+      {infoBox === 'add-email' && (
+        <AddEmail changeInfoBoxHandler={setInfoBox} />
+      )}
     </div>
   );
 };

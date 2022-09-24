@@ -1,11 +1,11 @@
 import { useFormik } from 'formik';
 import { useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
-import { forgotPasswordSchema } from 'schemas';
+import { addEmailSchema } from 'schemas';
 import { EmailFormValues } from 'types';
 
-const useForgotPassword = () => {
-  const { t } = useTranslation('landing');
+const useAddEmail = () => {
+  const { t } = useTranslation('profile');
   const router = useRouter();
   const initialValues: EmailFormValues = {
     email: '',
@@ -13,7 +13,7 @@ const useForgotPassword = () => {
   const formik = useFormik({
     initialValues,
     onSubmit: () => {},
-    validationSchema: forgotPasswordSchema,
+    validationSchema: addEmailSchema,
     validateOnBlur: false,
     validateOnMount: false,
     enableReinitialize: true,
@@ -22,4 +22,4 @@ const useForgotPassword = () => {
   return { formik, t, router };
 };
 
-export default useForgotPassword;
+export default useAddEmail;
