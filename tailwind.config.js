@@ -38,6 +38,7 @@ module.exports = {
         hr: 'rgba(206, 212, 218, 0.5)',
         hulk: '#198754',
         lightHulk: 'rgba(25, 135, 84, 0.2)',
+        lightBorder: '#D9D9D9',
       },
       width: {
         102: '27rem',

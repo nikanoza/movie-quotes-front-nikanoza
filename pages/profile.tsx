@@ -31,7 +31,7 @@ const Profile = () => {
         />
       </Button>
       {infoBox === 'main' && <ProfileMain changeInfoBoxHandler={setInfoBox} />}
-      {infoBox === 'emails' && <Emails />}
+      {infoBox === 'emails' && <Emails changeInfoBoxHandler={setInfoBox} />}
     </div>
   );
 };
