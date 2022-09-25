@@ -1,5 +1,5 @@
 import { Button, Menu } from 'components';
-import { AddEmail, Emails, ProfileMain } from 'components/profile';
+import { AddEmail, Confirm, Emails, ProfileMain } from 'components';
 import { useProfile } from 'hooks';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -21,20 +21,23 @@ const Profile = () => {
       onClick={closeMenuHandler}
     >
       <Menu menuRef={menuRef} openMenu={openMenu} menuStatus={menuStatus} />|
-      <Button id='back-btn' type='button' className='w-6 ml-10'>
-        <Image
-          src='/assets/arrowLeft.png'
-          alt=''
-          width={'14'}
-          height={'16'}
-          className=''
-        />
-      </Button>
+      {infoBox !== 'confirm' && (
+        <Button id='back-btn' type='button' className='w-6 ml-10'>
+          <Image
+            src='/assets/arrowLeft.png'
+            alt=''
+            width={'14'}
+            height={'16'}
+            className=''
+          />
+        </Button>
+      )}
       {infoBox === 'main' && <ProfileMain changeInfoBoxHandler={setInfoBox} />}
       {infoBox === 'emails' && <Emails changeInfoBoxHandler={setInfoBox} />}
       {infoBox === 'add-email' && (
         <AddEmail changeInfoBoxHandler={setInfoBox} />
       )}
+      {infoBox === 'confirm' && <Confirm changeInfoBoxHandler={setInfoBox} />}
     </div>
   );
 };
