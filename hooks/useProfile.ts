@@ -1,9 +1,17 @@
 import { useRef, useState } from 'react';
+import { InfoModal } from 'types';
+
+const infoModalState: InfoModal = {
+  status: true,
+  header: '',
+  description: '',
+};
 
 const useProfile = () => {
   const menuRef = useRef<HTMLDivElement>(null);
   const [menuStatus, setMenuStatus] = useState<boolean>(false);
-  const [infoBox, setInfoBox] = useState<string>('confirm');
+  const [infoModal, setInfoModal] = useState<InfoModal>(infoModalState);
+  const [infoBox, setInfoBox] = useState<string>('emails');
   const closeMenu = () => {
     setMenuStatus(false);
   };
@@ -11,7 +19,16 @@ const useProfile = () => {
     setMenuStatus(true);
   };
 
-  return { menuRef, closeMenu, openMenu, menuStatus, infoBox, setInfoBox };
+  return {
+    menuRef,
+    closeMenu,
+    openMenu,
+    menuStatus,
+    infoBox,
+    setInfoBox,
+    infoModal,
+    setInfoModal,
+  };
 };
 
 export default useProfile;

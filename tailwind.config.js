@@ -39,6 +39,8 @@ module.exports = {
         hulk: '#198754',
         lightHulk: 'rgba(25, 135, 84, 0.2)',
         lightBorder: '#D9D9D9',
+        alert: '#BADBCC',
+        alertText: '#0F5132',
       },
       width: {
         102: '27rem',

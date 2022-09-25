@@ -1,5 +1,6 @@
 import { Button, Menu } from 'components';
 import { AddEmail, Confirm, Emails, ProfileMain } from 'components';
+import InfoModal from 'components/profile/InfoModal/InfoModal';
 import { useProfile } from 'hooks';
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -7,8 +8,16 @@ import Image from 'next/image';
 import React from 'react';
 
 const Profile = () => {
-  const { menuRef, closeMenu, openMenu, menuStatus, infoBox, setInfoBox } =
-    useProfile();
+  const {
+    menuRef,
+    closeMenu,
+    openMenu,
+    menuStatus,
+    infoBox,
+    setInfoBox,
+    infoModal,
+    setInfoModal,
+  } = useProfile();
 
   const closeMenuHandler = (event: React.MouseEvent<HTMLDivElement>) => {
     if (event.target !== menuRef.current && menuStatus) {
@@ -38,6 +47,9 @@ const Profile = () => {
         <AddEmail changeInfoBoxHandler={setInfoBox} />
       )}
       {infoBox === 'confirm' && <Confirm changeInfoBoxHandler={setInfoBox} />}
+      {infoModal.status && (
+        <InfoModal info={infoModal} setInfoModal={setInfoModal} />
+      )}
     </div>
   );
 };
