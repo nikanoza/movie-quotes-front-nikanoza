@@ -6,7 +6,7 @@ const AddEmail: React.FC<PropsType> = (props) => {
   const { formik, t, router } = useAddEmail();
   const languageFont = router.locale === 'en' ? 'font-neue' : 'font-georgian';
   return (
-    <div className='bg-boxBg px-8 pt-8 pb-14 mt-6 flex flex-col rounded-xl'>
+    <form className='bg-boxBg px-8 pt-8 pb-14 mt-6 flex flex-col rounded-xl'>
       <label
         htmlFor='add-email'
         className={`text-base lg:text-xl font-normal leading-6 ${languageFont} text-white mt-8 mr-auto`}
@@ -49,7 +49,7 @@ const AddEmail: React.FC<PropsType> = (props) => {
           {t('Add')}
         </Button>
       </div>
-    </div>
+    </form>
   );
 };
 

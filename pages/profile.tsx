@@ -1,4 +1,4 @@
-import { Button, Menu } from 'components';
+import { Button, ChangePassword, Menu } from 'components';
 import { AddEmail, Confirm, Emails, ProfileMain } from 'components';
 import InfoModal from 'components/profile/InfoModal/InfoModal';
 import { useProfile } from 'hooks';
@@ -30,7 +30,7 @@ const Profile = () => {
       onClick={closeMenuHandler}
     >
       <Menu menuRef={menuRef} openMenu={openMenu} menuStatus={menuStatus} />|
-      {infoBox !== 'confirm' && (
+      {infoBox !== 'confirm' && infoBox !== 'password' && (
         <Button id='back-btn' type='button' className='w-6 ml-10'>
           <Image
             src='/assets/arrowLeft.png'
@@ -49,6 +49,9 @@ const Profile = () => {
       {infoBox === 'confirm' && <Confirm changeInfoBoxHandler={setInfoBox} />}
       {infoModal.status && (
         <InfoModal info={infoModal} setInfoModal={setInfoModal} />
+      )}
+      {infoBox === 'password' && (
+        <ChangePassword changeInfoBoxHandler={setInfoBox} />
       )}
     </div>
   );

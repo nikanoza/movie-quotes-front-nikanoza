@@ -41,6 +41,7 @@ module.exports = {
         lightBorder: '#D9D9D9',
         alert: '#BADBCC',
         alertText: '#0F5132',
+        lowBorder: 'rgba(206, 212, 218, 0.2)',
       },
       width: {
         102: '27rem',
