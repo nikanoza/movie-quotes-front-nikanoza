@@ -17,6 +17,8 @@ module.exports = {
       backgroundImage: {
         darkBlue:
           'linear-gradient(187.16deg, #181623 0.07%, #191725 51.65%, #0D0B14 98.75%)',
+        popup:
+          'linear-gradient(112.94deg, rgba(239, 239, 239, 0.3) -1.81%, rgba(239, 239, 239, 0.00514528) 102.5%, rgba(1, 1, 1, 0.00260417) 102.51%, rgba(239, 239, 239, 0.05) 102.52%);',
       },
       colors: {
         cream: '#DDCCAA',
@@ -31,13 +33,26 @@ module.exports = {
         error: '#DC3545',
         eye: '#6C757D',
         link: '#0D6EFD',
+        boxBg: '#24222F',
+        menuBg: '#11101A',
+        hr: 'rgba(206, 212, 218, 0.5)',
+        hulk: '#198754',
+        lightHulk: 'rgba(25, 135, 84, 0.2)',
+        lightBorder: '#D9D9D9',
+        alert: '#BADBCC',
+        alertText: '#0F5132',
+        lowBorder: 'rgba(206, 212, 218, 0.2)',
       },
       width: {
         102: '27rem',
+        134: '33.625rem',
         150: '37.5rem',
+        '3/10': '30%',
       },
       height: {
-        102: '27rem',
+        0.25: '0,0625rem',
+        104: '26rem',
+        108: '27rem',
         150: '37.5rem',
         176: '44rem',
         256: '64rem',

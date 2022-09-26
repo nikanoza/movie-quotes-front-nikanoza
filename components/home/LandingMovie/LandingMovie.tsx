@@ -3,7 +3,7 @@ import { PropsType } from './types';
 
 const LandingMovie: React.FC<PropsType> = (props) => {
   return (
-    <div className='w-full h-102 md:h-150 relative'>
+    <div className='w-full h-108 md:h-150 relative'>
       <Image
         src={props.movie.poster}
         alt=''

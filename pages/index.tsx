@@ -1,9 +1,16 @@
 import type { NextPage } from 'next';
 import {
   Button,
+  ForgotPassword,
   LandingHeader,
   LandingMovie,
+  PostActivated,
+  PostForgot,
+  PostRegistration,
   RegistrationForm,
+  PasswordReset,
+  PostReset,
+  Login,
 } from 'components';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useHomePage } from 'hooks';
@@ -34,14 +41,14 @@ const movies = [
 ];
 
 const Home: NextPage = () => {
-  const { router, t } = useHomePage();
+  const { router, t, modal, openModal } = useHomePage();
   const locale = router.locale;
   return (
     <div className='w-full min-h-screen bg-darkBlue flex flex-col'>
       <div className='w-full h-screen flex flex-col'>
-        <LandingHeader />
+        <LandingHeader openModal={openModal} />
         <div className='w-full my-auto px-16 flex flex-col items-center'>
-          <h1 className='text-cream font-montserrat text-2xl md:text-3xl xl:text-4xl 3xl:text-6xl 2xl:w-1/4 3xl:w-2/5 leading-9 text-center font-bold'>
+          <h1 className='text-cream font-montserrat text-2xl md:text-3xl xl:text-4xl 3xl:text-6xl 3xl:w-2/5 leading-9 text-center font-bold'>
             {t('Find any quote in millions of movie lines')}
           </h1>
           <Button
@@ -50,6 +57,7 @@ const Home: NextPage = () => {
               locale === 'en' ? 'font-neue' : 'font-georgian'
             }`}
             type='button'
+            onClick={() => openModal('register')}
           >
             {t('Get started')}
           </Button>
@@ -63,7 +71,24 @@ const Home: NextPage = () => {
           © 2022 movie quotes. All rights reserved.
         </p>
       </footer>
-      <RegistrationForm />
+      {modal === 'register' && (
+        <RegistrationForm modalChangeHandler={openModal} />
+      )}
+      {modal === 'post-register' && (
+        <PostRegistration modalChangeHandler={openModal} />
+      )}
+      {modal === 'post-activated' && (
+        <PostActivated modalChangeHandler={openModal} />
+      )}
+      {modal === 'forgot-password' && (
+        <ForgotPassword modalChangeHandler={openModal} />
+      )}
+      {modal === 'post-forgot' && <PostForgot modalChangeHandler={openModal} />}
+      {modal === 'password-reset' && (
+        <PasswordReset modalChangeHandler={openModal} />
+      )}
+      {modal === 'post-reset' && <PostReset modalChangeHandler={openModal} />}
+      {modal === 'login' && <Login modalChangeHandler={openModal} />}
     </div>
   );
 };
