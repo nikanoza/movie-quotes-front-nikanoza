@@ -11,6 +11,10 @@ export type EmailFormValues = {
   email: string;
 };
 
+export type NameFormValues = {
+  name: string;
+};
+
 export type PasswordResetFormValues = {
   password: string;
   repeatPassword: string;

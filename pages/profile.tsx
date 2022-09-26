@@ -1,4 +1,4 @@
-import { Button, ChangePassword, Menu } from 'components';
+import { Button, ChangeName, ChangePassword, Menu } from 'components';
 import { AddEmail, Confirm, Emails, ProfileMain } from 'components';
 import InfoModal from 'components/profile/InfoModal/InfoModal';
 import { useProfile } from 'hooks';
@@ -53,6 +53,7 @@ const Profile = () => {
       {infoBox === 'password' && (
         <ChangePassword changeInfoBoxHandler={setInfoBox} />
       )}
+      {infoBox === 'name' && <ChangeName changeInfoBoxHandler={setInfoBox} />}
     </div>
   );
 };

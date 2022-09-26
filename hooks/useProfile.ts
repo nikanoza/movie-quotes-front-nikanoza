@@ -11,7 +11,7 @@ const useProfile = () => {
   const menuRef = useRef<HTMLDivElement>(null);
   const [menuStatus, setMenuStatus] = useState<boolean>(false);
   const [infoModal, setInfoModal] = useState<InfoModal>(infoModalState);
-  const [infoBox, setInfoBox] = useState<string>('password');
+  const [infoBox, setInfoBox] = useState<string>('main');
   const closeMenu = () => {
     setMenuStatus(false);
   };
